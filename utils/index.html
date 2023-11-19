@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang=zh-CN><head> <meta name=generator content="Microsoft FrontPage 17.0" /><meta name=robots content=noindex,nofollow /><title>&#32593;&#39029;&#23567;&#24037;&#20855;</title> <style>
+html, body, main, iframe { padding: 0; margin: 0; width: 100%; height: 100%; }
+body { --fg-color: #C24; --bg-color: #FFF; color: var(--fg-color);
+  & a {
+    &:link { color: unset; }
+    &:visited { color: unset; }
+  }
+}
+main { display: flex; flex-direction: column; justify-content: flex-start; }
+nav { order: 1; display: flex; flex-wrap: wrap; gap: 0.5em; padding: 0.25em 0.5em;
+  & button, a:link { flex: none; padding: 0.25em 0.5em; color: var(--fg-color); background: transparent; font-size: small; border: 1px solid var(--fg-color); border-radius: 0.25em; }
+}
+a:link { text-decoration: none; }
+iframe { order: 2; border: none; display: none;
+  &:target { display:unset; }
+}
+
+dialog { border: 0.5em solid #000000C0;
+  &::backdrop { background: #00000080; }
+  & form>div:last-of-type { display: flex; flex-direction: row-reverse; }
+}
+
+dialog#convert {
+  & input[type="file"] { display: none; }
+  & div:has(select option[value="image/png"]:checked) + div { display: none; }
+}
+
+iframe#countdown:target ~ nav a[href="#countdown"],
+iframe#rod:target ~ nav a[href="#rod"],
+iframe#roman:target ~ nav a[href="#roman"],
+iframe#trigram:target ~ nav a[href="#trigram"],
+iframe#tetragram:target ~ nav a[href="#tetragram"],
+iframe#regexp:target ~ nav a[href="#regexp"],
+iframe#whois:target ~ nav a[href="#whois"] {
+  background: var(--fg-color);
+  color: var(--bg-color);
+}
+</style> <script src=main.js></script> </head> <body> <main> <dialog id=convert> <form method=dialog> <input name=file type=file accept="image/*" /> <fieldset> <legend>&#35831;&#36873;&#25321;&#22270;&#29255;&#26684;&#24335;</legend> <div> <label>&#26684;&#24335;</label> <select name=type> <option value="image/png">PNG</option> <option value="image/jpeg">JPEG</option> <option value="image/webp">WEBP</option> </select> </div> <div> <label>&#36136;&#37327;</label> <input name=quality type=number min=0 max=100 step=1 /> </div> </fieldset> <div> <button value=cancel>&#21462;&#28040;</button> <button value=save>&#20445;&#23384;</button> </div> </form> </dialog> <iframe id=countdown src="countdown/" loading=lazy></iframe> <iframe id=rod src="rod/" loading=lazy></iframe> <iframe id=roman src="roman/" loading=lazy></iframe> <iframe id=trigram src="trigram/" loading=lazy></iframe> <iframe id=tetragram src="tetragram/" loading=lazy></iframe> <iframe id=regexp src="regexp/" loading=lazy></iframe> <dialog id=jsonview> <form method=dialog> <textarea></textarea> <div> <button value=cancel>&#21462;&#28040;</button> <button value=show>&#26174;&#31034;</button> </div> </form> </dialog> <iframe id=whois src="whois/" loading=lazy></iframe> <nav> <button name=screenshot>&#25130;&#22270;</button> <button name=convert>&#22270;&#29255;&#26684;&#24335;&#36716;&#25442;</button> <a href=#countdown>&#20498;&#35745;&#26102;</a> <a href=#rod>&#31639;&#31609;&#25968;&#23383;</a> <a href=#roman>&#32599;&#39532;&#25968;&#23383;</a> <a href=#trigram>&#21608;&#26131;&#20843;&#21350;</a> <a href=#tetragram>&#22826;&#29572;&#20843;&#21313;&#19968;</a> <a href=#regexp>&#27491;&#21017;&#34920;&#36798;&#24335;</a> <button name=jsonview>JSON</button> <a href=#whois>whois</a> </nav> </main> </body></html>

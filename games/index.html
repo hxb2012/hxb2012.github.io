@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang=zh-CN><head> <meta name=generator content="Microsoft FrontPage 17.0" /><meta name=robots content=noindex,nofollow /><title>&#32593;&#39029;&#23567;&#24037;&#20855;</title> <style>
+html, body, main, iframe { padding: 0; margin: 0; width: 100%; height: 100%; }
+body { --fg-color: #C24; --bg-color: #FFF; color: var(--fg-color);
+  & a {
+    &:link { color: unset; }
+    &:visited { color: unset; }
+  }
+}
+main { display: flex; flex-direction: column; justify-content: flex-start; }
+nav { order: 1; display: flex; flex-wrap: wrap; gap: 0.5em; padding: 0.25em 0.5em;
+  & button, a:link { flex: none; padding: 0.25em 0.5em; color: var(--fg-color); background: transparent; font-size: small; border: 1px solid var(--fg-color); border-radius: 0.25em; }
+}
+a:link { text-decoration: none; }
+iframe { order: 2; border: none; display: none;
+  &:target { display:unset; }
+}
+
+iframe#snake:target ~ nav a[href="#snake"],
+iframe#slide:target ~ nav a[href="#slide"],
+iframe[id="2048"]:target ~ nav a[href="#2048"],
+iframe[id="3"]:target ~ nav a[href="#3"],
+iframe#fibonacci:target ~ nav a[href="#fibonacci"],
+iframe#lightsout:target ~ nav a[href="#lightsout"],
+iframe#mine:target ~ nav a[href="#mine"],
+iframe#samegame:target ~ nav a[href="#samegame"],
+iframe#match3:target ~ nav a[href="#match3"],
+iframe#sudoku:target ~ nav a[href="#sudoku"] {
+  background: var(--fg-color);
+  color: var(--bg-color);
+}
+</style> </head> <body> <main> <iframe id=snake src="snake/" loading=lazy></iframe> <iframe id=slide src="slide/" loading=lazy></iframe> <iframe id=2048 src="2048/" loading=lazy></iframe> <iframe id=3 src="3/" loading=lazy></iframe> <iframe id=fibonacci src="fibonacci/" loading=lazy></iframe> <iframe id=lightsout src="lightsout/" loading=lazy></iframe> <iframe id=mine src="mine/" loading=lazy></iframe> <iframe id=samegame src="samegame/" loading=lazy></iframe> <iframe id=match3 src="match3/" loading=lazy></iframe> <iframe id=sudoku src="sudoku/" loading=lazy></iframe> <nav> <a href=#snake>&#36138;&#21507;&#34503;</a> <a href=#slide>&#25340;&#22270;</a> <a href=#2048>2048</a> <a href=#3>Threes</a> <a href=#fibonacci>Fibonacci</a> <a href=#lightsout>&#20851;&#28783;</a> <a href=#mine>&#25195;&#38647;</a> <a href=#samegame>&#28040;&#28040;&#20048;</a> <a href=#match3>&#19977;&#28040;</a> <a href=#sudoku>&#25968;&#29420;</a> </nav> </main> </body></html>
